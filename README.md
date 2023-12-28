@@ -1,4 +1,4 @@
-# Cifar 10 Autoencode and Classification
+# Cifar 10 Autoencoder and Classifier
 - The following projects use convolutional neural networks to classify and autoencode the CIFAR10 dataset.
 - The CIFAR10 dataset contains 60,000 32x32 color images in 10 classes.
 - [Here is a link to the dataset.](https://www.cs.toronto.edu/~kriz/cifar.html)
