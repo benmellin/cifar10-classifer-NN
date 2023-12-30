@@ -1,14 +1,11 @@
-### Classify Cifar 10
+# Classify Cifar 10
 - The goal of this project is to create a convolutional neural network to classify
-images in the CIFAR 10 data set, which contains 60,000 32x32 color images of 10 different classes.
-
-- Here is a link to the dataset: https://www.cs.toronto.edu/~kriz/cifar.html
-
+images in the [CIFAR10 data set](https://www.cs.toronto.edu/~kriz/cifar.html), which contains 60,000 32x32 color images of 10 different classes.
+- [The original colab notebook can be found here.](https://colab.research.google.com/drive/1971Y4V0eTrZaIhJsBzaKNyLXa_sd8uOB?usp=sharing)
 - I use the pytorch library for the implementation of this project.
-
-- This is my unique solution to a project created for Mike X Cohen's "A Deep Understanding of Deep Learning Class"
-
-- Much of the code is adapted from this course
+- This is my unique solution to a project created for Mike X Cohen's "A Deep Understanding of Deep Learning Class".
+- My code correctly classifies the images in the test set 81% of the time.
+- Much of the code is adapted from this course.
 
 
 ```python
@@ -47,7 +44,7 @@ print(device)
     cuda:0
 
 
-
+## Prepare the Data
 ```python
 # download the dataset
 # download the CIFAR10 dataset
@@ -120,7 +117,7 @@ print( y.shape)
     torch.Size([32])
 
 
-# Now I create the DL model
+## Now I create the DL model
 
 
 ```python
@@ -208,7 +205,7 @@ def makeTheNet(printtoggle=False):
   return net,lossfun,optimizer
 ```
 
-
+### Test the untrained model
 ```python
 # test the model with one batch
 net,lossfun,optimizer = makeTheNet(True)
@@ -241,7 +238,7 @@ print(loss)
     tensor(2.3191, grad_fn=<NllLossBackward0>)
 
 
-
+## Train the model
 ```python
 # a function that trains the model
 
@@ -358,11 +355,11 @@ plt.show()
 
 
     
-![svg](/Users/benjaminmellin/Desktop/Teststuff/Convert/Classify_CIFAR10_CNN_12_0.svg)
+![svg](images/Classify_CIFAR10_CNN_12_0.svg)
     
 
 
-
+## Test the trained model
 ```python
 #Push data from test set through net
 
@@ -423,6 +420,6 @@ plt.show()
 
 
     
-![svg](/Users/benjaminmellin/Desktop/Teststuff/Convert/Classify_CIFAR10_CNN_14_0.svg)
+![svg](images/Classify_CIFAR10_CNN_14_0.svg)
     
 
